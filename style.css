@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(255, 255, 255);
+  }
+  .container{
+    border-style: solid;
+    height: 15rem;
+    text-align: center;
+  }
