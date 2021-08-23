@@ -1,3 +1,13 @@
+var inputEl = document.querySelector("#input-date");
+var btnEl = document.querySelector("#btn-el");
+var output = document.querySelector("#result");
+var socialLink1 = document.querySelector("#social-link1");
+var socialLink2 = document.querySelector("#social-link2");
+
+socialLink1.style.display="none"
+socialLink2.style.display="none"
+
+
 function reverseList(str){
     var listOfChars = str.split('');
     var reversedListOfChar = listOfChars.reverse();
@@ -115,9 +125,9 @@ function reverseList(str){
     return [ctr, nextDate];
   }
   
-  var inputEl = document.querySelector("#input-date");
-  var btnEl = document.querySelector("#btn-el");
-  var output = document.querySelector("#result");
+   
+
+  
   
   function clickHandler(event){
     var inputDate = inputEl.value;
@@ -133,10 +143,17 @@ function reverseList(str){
       
       if (isPalindrome){
         output.innerText="yes!! your birthday is palindrome."
+        output.style.color="green";
+        socialLink1.style.display="block"
+        socialLink2.style.display="block"
       }
       else{
         var [ctr, nextDate] = getNextPalindromeDate(date);
-        output.innerText = `next palindrome is on ${nextDate.day}-${nextDate.month}-${nextDate.year} !! so you missed by ${ctr} days. `
+        output.innerText = `Next palindrome date is on ${nextDate.day}-${nextDate.month}-${nextDate.year} !! so you missed by ${ctr} days. `
+        output.style.color="red";
+        socialLink1.style.display="block"
+        socialLink2.style.display="block"
+        
       }
     }
   
