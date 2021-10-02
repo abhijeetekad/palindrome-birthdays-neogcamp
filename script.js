@@ -51,8 +51,8 @@ function reverseList(str){
     var listOfPalindrome = getAllFormatsofDate(date);
     var palindrome = false;
   
-    for (var i=0;i<listOfPalindrome.length;i++){
-      if(isPalindrome(listOfPalindrome[i])){
+    for (var i=1;i<=listOfPalindrome.length;i++){
+      if(isPalindrome(listOfPalindrome[i-1])){
         palindrome = true;
         break;
       }
